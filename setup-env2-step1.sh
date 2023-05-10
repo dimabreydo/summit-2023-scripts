@@ -6,6 +6,7 @@ sed -i "s/AWS_REGION/$AWS_REGION/g" \
    gitops-system/clusters-config/template/def/eks-cluster.yaml \
    gitops-system/tools-config/external-secrets/sealed-secrets-key.yaml
  
+ 
 sed -i "s~REPO_PREFIX~$REPO_PREFIX~g" \
      gitops-system/workloads/template/git-repo.yaml
  
