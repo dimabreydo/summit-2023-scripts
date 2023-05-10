@@ -6,7 +6,6 @@ sed -i "s/AWS_REGION/$AWS_REGION/g" \
    gitops-system/clusters-config/template/def/eks-cluster.yaml \
    gitops-system/tools-config/external-secrets/sealed-secrets-key.yaml
  
- 
 sed -i "s~REPO_PREFIX~$REPO_PREFIX~g" \
      gitops-system/workloads/template/git-repo.yaml
  
@@ -58,7 +57,7 @@ cp -r eks-multi-cluster-gitops/repos/apps-manifests/product-catalog-fe-manifests
 cd ~/environment
 cp -r eks-multi-cluster-gitops/repos/apps-manifests/product-catalog-api-manifests/v1/* product-catalog-api-manifests/
 cd ~/environment
-cp -r eks-multi-cluster-gitops/repos/apps-manifests/product-catalog-api-manifests/v2-staging/* v2-staging/
+cp -r eks-multi-cluster-gitops/repos/apps-manifests/product-catalog-api-manifests/v2-staging/* product-catalog-api-manifests/kubernetes/
 
 cd ~/environment
 cd product-catalog-api-manifests
@@ -81,3 +80,6 @@ which flux
 sudo cp flux /usr/local/bin/
 flux —version
 flux get kustomization
+
+cd ~/environment/gitops-system
+git pull —rebase origin main

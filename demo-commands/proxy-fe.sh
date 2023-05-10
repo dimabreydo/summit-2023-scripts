@@ -1,0 +1,1 @@
+kubectl -nproduct-catalog-fe port-forward svc/product-catalog-fe-staging 8080:80
