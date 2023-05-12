@@ -82,4 +82,4 @@ flux —version
 flux get kustomization
 
 cd ~/environment/gitops-system
-git pull —rebase origin main
+git pull --rebase origin main
