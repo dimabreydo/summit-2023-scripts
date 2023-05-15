@@ -57,7 +57,7 @@ cp -r eks-multi-cluster-gitops/repos/apps-manifests/product-catalog-fe-manifests
 cd ~/environment
 cp -r eks-multi-cluster-gitops/repos/apps-manifests/product-catalog-api-manifests/v1/* product-catalog-api-manifests/
 cd ~/environment
-cp -r eks-multi-cluster-gitops/repos/apps-manifests/product-catalog-api-manifests/v2-staging/* product-catalog-api-manifests/kubernetes/
+cp -r eks-multi-cluster-gitops/repos/apps-manifests/product-catalog-api-manifests/v2-staging/* product-catalog-api-manifests/
 
 cd ~/environment
 cd product-catalog-api-manifests
