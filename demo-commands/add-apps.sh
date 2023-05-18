@@ -46,10 +46,8 @@ cd ~/environment
 printf -v policy "{\"Version\": \"2012-10-17\",\"Statement\": [{\"Sid\": \"AllowDynamoDB\",\"Action\": \"dynamodb:*\",\"Effect\": \"Allow\",\"Resource\": \"arn:aws:dynamodb:${AWS_REGION}:${ACCOUNT_ID}:table/products-staging\"}]}" ;\
 policy="$policy" yq -i 'select(.kind == "Policy") |= .spec.forProvider.document=strenv(policy)' gitops-workloads/commercial-staging/product-catalog-api/app-iam.yaml
 
-cd ~/environment
-cd gitops-workloads
 # git add .
 # git commit -m "Add product-catalog to commercial-staging"
 # git push
-source ../setup/aliases.sh
+source ~/environment/summit-2023-scripts/setup/aliases.sh
 cdgw
