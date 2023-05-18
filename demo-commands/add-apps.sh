@@ -49,5 +49,4 @@ policy="$policy" yq -i 'select(.kind == "Policy") |= .spec.forProvider.document=
 # git add .
 # git commit -m "Add product-catalog to commercial-staging"
 # git push
-source ~/environment/summit-2023-scripts/setup/aliases.sh
-cd ~/environment/gitops-workloads
+
