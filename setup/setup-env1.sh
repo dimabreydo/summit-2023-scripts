@@ -78,6 +78,7 @@ flux —version
 ls -la
 which flux
 sudo cp flux /usr/local/bin/
+rm -rf flux*
 flux —version
 flux get kustomization
 
