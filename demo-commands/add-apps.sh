@@ -51,4 +51,5 @@ cd gitops-workloads
 # git add .
 # git commit -m "Add product-catalog to commercial-staging"
 # git push
-
+source ../setup/aliases.sh
+cdgw
